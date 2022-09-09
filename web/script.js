@@ -73,7 +73,7 @@ const cartHandler = function() {
 let subscribeButton = document.getElementById("subscribe");
 const subscribeHandler = async function() {
   let email = document.getElementById("email").value
-  let emailUrl = "/api/cloud/postEmail" + "?email=" + email;
+  let emailUrl = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-a178602b-db5e-449c-9212-5be181ff7c01/cloud/post-email" + "?email=" + email;
   await axios.post(emailUrl);
   localStorage.setItem("subscribe", email);
   document.getElementById("email").value = '';
